@@ -148,7 +148,7 @@ unset NCDB
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
 # 0 = OFF
-DEBUG=0
+DEBUG=1
 debug_mode
 
 # Nextcloud 16 is required.
@@ -186,7 +186,7 @@ if [ "$KEYBOARD_LAYOUT" = "se" ]
 then
     print_text_in_color "$ICyan" "Svensk locale är redan konfigurerad."
 elif [ "$KEYBOARD_LAYOUT" = "de" ]
-then 
+then
     sudo locale-gen "de_DE.UTF-8" && sudo dpkg-reconfigure --frontend=noninteractive locales
 elif [ "$KEYBOARD_LAYOUT" = "us" ]
 then
